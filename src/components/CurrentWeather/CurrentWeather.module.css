@@ -1,0 +1,47 @@
+.current {
+  margin: 20px 0;
+  padding: 50px 0;
+  width: 100%;
+  border-radius: 25px;
+  animation: gradientAnimation 4s linear infinite;
+  background: linear-gradient(45deg, #88b2dc, #8ada75);
+  background-size: 200% 200%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 10%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.condition {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+  color: #fff6f6;
+}
+
+.current>p {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.current>p>span {
+  font-size: 90px;
+  color: #fff;
+}
+
+@media (max-width: 450px) {
+  .current>p>span {
+    font-size: 60px;
+    color: #fff;
+  }
+}

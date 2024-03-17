@@ -1,0 +1,31 @@
+import styles from './Forecast.module.css';
+import { observer } from 'mobx-react-lite';
+import { toJS } from 'mobx';
+import currentWeather from '../../stores/currentWeatherStore'
+
+const Forecast = observer(() => {
+  const { forecast } = currentWeather;
+
+  console.log(toJS(forecast))
+
+  return (
+    <div className={styles['forecast-container']}>
+      <p className={styles.text}>Погода на 7 дней</p>
+      {toJS(forecast).map((item) => (
+        <div className={styles.item}>
+          <div className={styles['day-and-pic']}>
+            <p>{item.day}</p>
+            <img src={item.pic} alt="" height={25} />
+          </div>
+
+          <div className={styles.temperatures}>
+            <p>{`${item.minTemp} °C`}</p>
+            <p>{`${item.maxTemp} °C`}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+})
+
+export { Forecast }

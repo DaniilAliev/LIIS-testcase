@@ -1,0 +1,40 @@
+.forecast-container {
+  padding: 10px 20px;
+  background-color: aliceblue;
+  border-radius: 25px;
+}
+
+.forecast-container> :last-child {
+  border: none;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(221, 238, 253);
+  padding: 10px 0;
+}
+
+.text {
+  border-bottom: 1px solid rgb(221, 238, 253);
+  padding: 10px 0;
+  color: rgb(156, 178, 199);
+}
+
+.day-and-pic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temperatures {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.temperatures>p {
+  width: 50px;
+  height: 16px;
+  text-align: center;
+}
