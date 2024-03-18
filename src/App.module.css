@@ -1,14 +1,22 @@
-.container {
-  padding: 40px;
+.general-container {
   margin: 20px;
-  background-color: white;
-  border-radius: 25px;
   max-width: 1000px;
   width: 100%;
+}
+
+.container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 25px;
+  flex: 1;
 }
 
 h1 {
   text-align: center;
   font-weight: 200;
   font-size: 40px;
+}
+
+.cube {
+  height: 1000px;
 }
