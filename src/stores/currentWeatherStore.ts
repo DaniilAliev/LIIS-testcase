@@ -20,7 +20,7 @@ class CurrentWeatherStore {
   }
 
   getWeather = () => {
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city},${country}&days=${days}&lang=ru`)
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city},${country}&days=${days}&lang=ru`)
       .then(response => {
         console.log(response.data);
         const { condition, temperature} = formatCurrentData(response.data);
